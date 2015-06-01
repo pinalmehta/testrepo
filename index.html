@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<script src="jquery.min.js"></script>
+<script src="jquery.handsontable.full.js"></script>
+<link rel="stylesheet" media="screen" href="jquery.handsontable.full.css">
+
+</head>
+
+<body>
+<div id="wheight">
+
+    <!--<p>
+        <button name="save">Save</button>
+		<label><input type="checkbox" autocomplete="off" checked="checked" name="autosave"> Autosave</label>
+    </p>-->
+    <pre id="campaignconsole" class="console">Changes will be autosaved</pre>
+
+    <div id="campaign" class="handsontable"></div>
+	
+</div>
+<script>
+var $container = $("#campaign");
+var $console = $("#campaignconsole");
+var $parent = $container.parent();
+var autosaveNotification;
+var data = [
+  ['', 'Kia', 'Nissan', 'Toyota', 'Honda'],
+  ['2008', 10, 11, 12, 13],
+  ['2009', 20, 11, 14, 13],
+  ['2009', 30, 15, 12, 13]
+];
+$container.handsontable({
+	  data: data,
+	  startRows: 5,
+	  startCols: 5,
+	  colHeaders: true,
+	  minSpareRows: 1
+	});
+
+</script>
+</body>
+</html>
